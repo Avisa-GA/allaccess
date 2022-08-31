@@ -17,7 +17,9 @@
 ### Then do the process of sequelize:
 ```js
 sequelize init
-# then change the config file to this
+```
+### then change the config file to this
+```js
 {
   "development": {
     "database": "userapp_development",
@@ -40,29 +42,38 @@ sequelize init
       }
   }
 }
-
-# then create the database
+```
+### then create the database
+```js
 sequelize db:create userapp_development
-
-# create a model
+```
+### create a model
+```js
 sequelize model:create --name user --attributes firstName:string,lastName:string,age:integer,email:string
-
-# do the migration
+```
+### do the migration
+```js
 sequelize db:migrate
-
-# for seed data first generate a seed file
+```
+### for seed data first generate a seed file
+```js
 sequelize seed:generate --name demo-creditcards
-
-# then after adding fake data try to run that file
+```
+### then after adding fake data try to run that file
+```js
 sequelize db:seed --seed my_seeder_file.js
-
-# Then run this command
+```
+### Then run this command
+```js
 sequelize db:seed:all
+```
 
-# For editing the data model
+### For editing the data model
+```js
 sequelize migration:create --name rename_brand_to_company 
-
-# Then do the migratiom
+```
+### Then do the migratiom
+```js
 sequelize db:migrate migrations/20220831175048-rename_brand_to_company.js
 
 ```
